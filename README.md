@@ -1,2 +1,1 @@
 # ATVFUNKEBAMOBILE
-vai se-foder 
