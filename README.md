@@ -1,2 +1,2 @@
 # ATVFUNKEBAMOBILE
-não leia =(
+vai  foder 
