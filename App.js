@@ -12,8 +12,8 @@ return(
     <View style={styles.container}>
         
         <Image
-                    style={styles.stretch}
-                    source={require('./imagens/logo_ifc.png')}
+                    style={styles.inicial}
+                    source={require('./imagens/teste.jpg')}
                 />  
         <Button
                 title='Detalhes Do Campus'
@@ -32,8 +32,27 @@ return(
 
 function OutraTela( {route, navigation} ){
     return(
+        <ScrollView>
         <View style={styles.container}>
-            <Text style={styles.titulo}>Campus: </Text>
+            <Text style={styles.titulo}>CAMPUS   </Text>
+            <Image
+                    style={styles.campus}
+                    source={require('./imagens/ifc.png')}
+                />  
+            <Text style={styles.descricao}>O Campus Ibirama foi inaugurado em 1º de fevereiro de 2010 na antiga Escola Hamônia e iniciou suas atividades com o ensino no segundo semestre desse mesmo ano. Esteve vinculado ao Campus Rio do Sul até 3 de fevereiro de 2011 e em 4 de fevereiro de 2011, através de uma solenidade, deu início ao seu funcionamento regular e uma mudança na vinculação, passando a ser gerido pela Reitoria do IFC, instalada em Blumenau.
+
+A partir do primeiro semestre de 2011 foram ofertados os primeiros cursos técnicos integrados ao ensino médio. A integralização entre ensino médio e técnico facilita o acesso de jovens à educação profissionalizante e permite impulsionar o desenvolvimento local.
+
+Entre os anos de 2012 e 2013 o Campus foi contemplado com uma grande reforma estrutural e adequação de espaços físicos. Alterações importantes para o Campus Ibirama receber oficialmente sua autonomia em 23 de abril de 2013 com a Portaria 330/MEC. Foi também em 2013 que o Campus desenvolveu os projetos do curso técnico integrado em Administração e o curso superior de Tecnologia em Design de Moda, que entraram em funcionamento já em fevereiro de 2014.
+
+Em 2016 dá-se início a uma nova fase, com a abertura dos Cursos de PROEJA com Qualificação em Administração Comercial (Educação de Jovens e Adultos) e a Pós-graduação em Educação e Interdisciplinaridade. E, em 2017, foi inaugurada a biblioteca do IFC Ibirama e a Pós-graduação em Moda.
+
+Atualmente o Campus Ibirama conta com 60 servidores e aproximadamente 500 alunos, oferecendo os cursos técnicos integrados ao ensino médio em Administração, Informática e Vestuário; PROEJA com Qualificação em Administração Comercial; Curso Superior de Tecnologia em Design de Moda; Especialização em Educação e Interdisciplinaridade e Especialização em Moda.</Text>
+<Image
+                    style={styles.logo}
+                    source={require('./imagens/logo2.png')}
+                />  
+             
              <Button
                     title='Voltar para a tela'
                     color="black"
@@ -41,11 +60,15 @@ function OutraTela( {route, navigation} ){
                     navigation.goBack() 
                  }}/>
         </View>
-       
+       </ScrollView>
     )}
     function TelaEscolherPessoa( {route, navigation} ){
         return(
             <View style={styles.container}>
+                  <Image
+                    style={styles.campus}
+                    source={require('./imagens/escola.jpg')}
+                />  
                 <Text style={styles.titulo}>Selecione Uma Curso</Text>
                 <Button
                         title='ADMINTRAÇÂO '
@@ -136,13 +159,13 @@ function OutraTela( {route, navigation} ){
             return(
                 <ScrollView >
                 <View style={styles.container}>
-                <Image
-                    style={styles.stretch}
-                    source={require('./imagens/ifcfachada.jpg')}
-                />                
                     <Text style={styles.titulo}>Administração</Text>
-                    
-                    <Text style={styles.descricao}>O Curso Técnico em Administração tem por objetivo proporcionar aos estudantes o desenvolvimento de sua autonomia enquanto cidadãos críticos e participativos, visando ao domínio dos conhecimentos científicos e tecnológicos da administração, para atuarem de maneira consciente e responsável diante das necessidades atuais no mundo do trabalho.
+                    <Image
+                    style={styles.adm}
+                    source={require('./imagens/adm.jpg')}
+                />  
+                    <Text style={styles.descricao}>
+                        O Curso Técnico em Administração tem por objetivo proporcionar aos estudantes o desenvolvimento de sua autonomia enquanto cidadãos críticos e participativos, visando ao domínio dos conhecimentos científicos e tecnológicos da administração, para atuarem de maneira consciente e responsável diante das necessidades atuais no mundo do trabalho.
 Assim, o profissional Técnico em Administração pode atuar nas instituições públicas, privadas e do terceiro setor que demandem atividades de gestão, trabalhando especialmente no suporte e apoio nos mais diversos setores.</Text>
                     <Text style={styles.cursos}>
                     Disciplinas Tecnicas
@@ -162,7 +185,10 @@ Assim, o profissional Técnico em Administração pode atuar nas instituições 
                         <Row data={tabela.tableHeadprofessor} style={styles.head} />
                         <Rows data={tabela.tableDataprofessor} />
                     </Table>
-
+                    <Image
+                    style={styles.logo}
+                    source={require('./imagens/logo2.png')}
+                />  
                     
                     <Button
                             title='Voltar'
@@ -220,7 +246,10 @@ Assim, o profissional Técnico em Administração pode atuar nas instituições 
                     <ScrollView >
                     <View style={styles.container}>                   
                         <Text style={styles.titulo}>VESTUARIO</Text>
-                        
+                        <Image
+                    style={styles.vest}
+                    source={require('./imagens/vest.jpg')}
+                />  
                         <Text style={styles.descricao}>O curso Técnico em Vestuário Integrado ao Ensino Médio objetiva proporcionar aos discentes o desenvolvimento de sua autonomia enquanto cidadãos críticos e participativos, visando o domínio dos conhecimentos científicos e tecnológicos, para atuarem de maneira consciente e responsável diante das necessidades atuais no mundo do trabalho, com foco na formação e a qualificação de profissionais com visão técnica para atuarem na área de confecção do vestuário, aptos a gerenciar e operacionalizar as diversas etapas do processo de produção do vestuário, em empresas da área industrial e de prestação de serviços. 
                         Disciplinas Tecnicas
                         </Text>
@@ -240,7 +269,10 @@ Assim, o profissional Técnico em Administração pode atuar nas instituições 
                             <Rows data={tabela.tableDataprofessor} />
                         </Table>
                         
-                        
+                        <Image
+                    style={styles.logo}
+                    source={require('./imagens/logo2.png')}
+                />  
                         
                         <Button
                                 title='Voltar'
@@ -295,7 +327,10 @@ Assim, o profissional Técnico em Administração pode atuar nas instituições 
                         <ScrollView >
                         <View style={styles.container}>                   
                             <Text style={styles.titulo}>Informática</Text>
-                            
+                            <Image
+                    style={styles.info}
+                    source={require('./imagens/info.jpg')}
+                />  
                             <Text style={styles.descricao}>Das 3400 horas de curso, 1050 horas destinam-se a unidades curriculares da área técnica. No entanto, o curso visa à interseção entre as áreas técnica e comum, com ênfase na prática profissional e com possibilidade de realização de estágios não obrigatórios.
                             </Text>
                             <Table borderStyle={{borderWidth: 2, borderColor: 'black'}}>
@@ -314,7 +349,10 @@ Assim, o profissional Técnico em Administração pode atuar nas instituições 
                                 <Rows data={tabela.tableDataprofessor} />
                             </Table>
                             
-                            
+                            <Image
+                    style={styles.logo}
+                    source={require('./imagens/logo2.png')}
+                />  
                             
                             <Button
                                     title='Voltar'
@@ -376,23 +414,15 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#green' },
   head: { height: 40, backgroundColor: '#f1f8ff' },
   text: { margin: 6 },
-//   container:{
-//     flex:1,
-//     backgrounColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "top",
-//     width: "100%",
-//     marginTop: '5%',
-// },
 titulo:{
     
-    fontSize: 20,
+    fontSize: 30,
     
 },
 descricao:{
     fontSize: 16,
     marginLeft: 10,
-    marginRight: 10,
+    marginRight: 75,
     alignItems: "center",
 },
 cursos:{
@@ -402,11 +432,56 @@ cursos:{
     marginRight: 10,
 },
 stretch: {
-    width: 500,
-    height: 150,
+    width: 275,
+    height: 200,
+    resizeMode: 'stretch',
+    alignContent: 'top',
+    
+    marginRight: '10%'
+  },
+  campus    : {
+    width: 370,
+    height: 200,
     resizeMode: 'stretch',
     alignContent: 'center',
-    
+    marginRight: '15%'
+  },
+  inicial    : {
+    width: '100%',
+    height: 200,
+    resizeMode: 'stretch',
+    alignContent: 'center',
+    marginRight: '15%'
+  },
+  vest    : {
+    width: '100%',
+    height: 200,
+    resizeMode: 'stretch',
+    alignContent: 'center',
+    marginRight: '15%'
+  },
+
+  adm    : {
+    width: '100%',
+    height: 200,
+    resizeMode: 'stretch',
+    alignContent: 'center',
+    marginRight: '15%'
+  },
+
+  info    : {
+    width: '100%',
+    height: 200,
+    resizeMode: 'stretch',
+    alignContent: 'center',
+    marginRight: '15%'
+  },
+
+  logo    : {
+    width: '100%',
+    height: 100,
+    resizeMode: 'stretch',
+    alignContent: 'center',
     marginRight: '15%'
   },
 });
