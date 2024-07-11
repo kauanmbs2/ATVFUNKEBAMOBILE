@@ -1,2 +1,2 @@
 # ATVFUNKEBAMOBILE
-vai  foder 
+vai se-foder 
